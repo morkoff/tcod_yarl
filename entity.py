@@ -21,14 +21,16 @@ class Entity:
         x: int = 0,
         y: int = 0,
         char: str = "?",
-        color: Tuple[int, int, int] = (255, 255, 255),
+        fg_color: Tuple[int, int, int] = (255, 255, 255),
+        bg_color: Tuple[int, int, int] = (219, 198, 166),
         name: str = "<Unnamed>",
         blocks_movement: bool = False,
     ):
         self.x = x
         self.y = y
         self.char = char
-        self.color = color
+        self.fg_color = fg_color
+        self.bg_color = bg_color
         self.name = name
         self.blocks_movement = blocks_movement
         if gamemap:
