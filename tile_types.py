@@ -1,4 +1,5 @@
 from typing import Tuple
+import color
 
 import numpy as np  # type: ignore
 
@@ -39,8 +40,8 @@ SHROUD = np.array((ord(" "), (255, 255, 255), (0, 0, 0)), dtype=graphic_dt)
 floor = new_tile(
     walkable=True,
     transparent=True,
-    dark=(ord("."), (80, 30, 90), (0, 0, 0)),
-    light=(ord("."), (200, 180, 50), (0, 0, 0)),
+    dark=(ord("."), (80, 30, 90), color.floor),
+    light=(ord("."), (200, 180, 50), color.floor),
 )
 wall = new_tile(
     walkable=False,
